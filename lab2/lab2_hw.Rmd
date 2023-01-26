@@ -14,9 +14,9 @@ Answer the following questions and complete the exercises in RMarkdown. Please e
 Make sure to use the formatting conventions of RMarkdown to make your report neat and clean!  
 
 1. What is a vector in R?  
-
+**A vector in R is a list of data **
 2. What is a data matrix in R?  
-
+**A data matrix in R is a table**
 3. Below are data collected by three scientists (Jill, Steve, Susan in order) measuring temperatures of eight hot springs. Run this code chunk to create the vectors.  
 ```{r}
 spring_1 <- c(36.25, 35.40, 35.30)
@@ -29,19 +29,63 @@ spring_7 <- c(32.90, 32.50, 32.80)
 spring_8 <- c(36.80, 36.45, 33.15)
 ```
 
-4. Build a data matrix that has the springs as rows and the columns as scientists.  
+4. Build a data matrix that has the springs as rows and the columns as scientists.
+
+```{r}
+hot_spring_temp <- c(spring_1, spring_2, spring_3, spring_4, spring_5, spring_6, spring_7, spring_8)
+temperature_matrix <- matrix(hot_spring_temp, nrow = 8, byrow = T)
+temperature_matrix
+```
+```{r}
+spring <- c("spring_1", "spring_2", "spring_3", "spring_4", "spring_5", "spring_6", "spring_7", "spring_8")
+scientist <- c("Jill", "Steve", "Susan")
+```
+```{r}
+colnames(temperature_matrix) <- scientist
+rownames(temperature_matrix) <- spring
+temperature_matrix
+```
+
 
 5. The names of the springs are 1.Bluebell Spring, 2.Opal Spring, 3.Riverside Spring, 4.Too Hot Spring, 5.Mystery Spring, 6.Emerald Spring, 7.Black Spring, 8.Pearl Spring. Name the rows and columns in the data matrix. Start by making two new vectors with the names, then use `colnames()` and `rownames()` to name the columns and rows.
+```{r}
+spring_names <- c("Bluebell Spring", "Opal Spring", "Riverside Spring", "Too Hot Spring", "Mystery Spring", "Emerald Spring", "Black Spring", "Pearl Spring")
+rownames(temperature_matrix) <- spring_names
+temperature_matrix
+```
+
 
 6. Calculate the mean temperature of all eight springs.
+**What method do I use to divide by the number of columns instead of manually counting them? (for this problem there is only 3 columns, but what if there are a large amount of columns? )**
+```{r}
+average_temp <- (rowSums(temperature_matrix)) / 3
+average_temp
+```
+
 
 7. Add this as a new column in the data matrix.  
+```{r}
+all_temperature_matrix <- cbind(temperature_matrix, average_temp)
+all_temperature_matrix
+```
+
 
 8. Show Susan's value for Opal Spring only.
+```{r}
+all_temperature_matrix[2,3]
+```
 
 9. Calculate the mean for Jill's column only.  
+```{r}
+Jill_mean <- mean(all_temperature_matrix[1:8])
+
+```
+
 
 10. Use the data matrix to perform one calculation or operation of your interest.
+```{r}
+mean(all_temperature_matrix[,4])
+```
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences.  
