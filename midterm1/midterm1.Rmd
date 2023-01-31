@@ -53,7 +53,9 @@ ecosphere %>%
 **Problem 4. (2 points) Which habitat has the highest diversity (number of species) in the data?**
 ```{r}
 ecosphere %>%
-  tabyl(common_name, habitat) 
+  group_by(habitat) %>%
+  tally()
+  
 ```
 
 Run the code below to learn about the `slice` function. Look specifically at the examples (at the bottom) for `slice_max()` and `slice_min()`. If you are still unsure, try looking up examples online (https://rpubs.com/techanswers88/dplyr-slice). Use this new function to answer question 5 below.
@@ -110,23 +112,52 @@ names(eagles)
 ```
 
 ```{r}
+
 eagles %>%
-  filter()
+mutate(conservation_status = ifelse(population_size < 250000, "threatened", population_size)) %>%
+arrange(population_size)
+  
+
+  
 ```
 
 Problem 11. (2 points) Consider the results from questions 9 and 10. Are there any species for which their threatened status needs further study? How do you know?
 ```{r}
-
+eagles %>%
+  select(common_name,population_size) %>%
+  arrange(population_size)
 ```
+```{r}
+#View(eagles)
+```
+**Bald eagles, Gray Hawk, Hook-billed Kite , Short-tailed Hawk, Snail Kite, White-tailed Hawk, 	
+White-tailed Kite , and Zone-tailed Hawk because their population size is denoted by NA**
 
 Problem 12. (4 points) Use the `ecosphere` data to perform one exploratory analysis of your choice. The analysis must have a minimum of three lines and two functions. You must also clearly state the question you are attempting to answer.
+**What species lays the most eggs per clutch?**
 ```{r}
-
+eagles_eggs <- ecosphere %>%
+filter(family == "Accipitridae")%>%
+select(common_name, mean_eggs_per_clutch, population_size)
+eagles_eggs
 ```
+```{r}
+eagles_eggs %>%
+  arrange(mean_eggs_per_clutch)
+```
+**body weight based on vore**
+```{r}
+eagles_vore <- ecosphere %>%
+filter(family == "Accipitridae")%>%
+select(common_name, diet, log10_mass)
+eagles_vore
+```
+
+
 
 Please provide the names of the students you have worked with with during the exam:
 ```{r}
-
+#Jacob Yousif
 ```
 
 Please be 100% sure your exam is saved, knitted, and pushed to your github repository. No need to submit a link on canvas, we will find your exam in your repository.

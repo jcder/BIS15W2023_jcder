@@ -509,1111 +509,18 @@ represented in the data?</p>
 <p><strong>Problem 4. (2 points) Which habitat has the highest diversity
 (number of species) in the data?</strong></p>
 <pre class="r"><code>ecosphere %&gt;%
-  tabyl(common_name, habitat) </code></pre>
-<pre><code>##                                                common_name Grassland Ocean
-##                                             Abert&#39;s Towhee         0     0
-##                                           Acorn Woodpecker         0     0
-##                                        Allen&#39;s Hummingbird         0     0
-##                                            Altamira Oriole         0     0
-##                                            American Avocet         0     0
-##                                           American Bittern         0     0
-##                                        American Black Duck         0     0
-##                                              American Coot         0     0
-##                                              American Crow         0     0
-##                                            American Dipper         0     0
-##                                         American Goldfinch         0     0
-##                                           American Kestrel         0     0
-##                                     American Oystercatcher         0     1
-##                                             American Pipit         1     0
-##                                          American Redstart         0     0
-##                                             American Robin         0     0
-##                             American Three-toed Woodpecker         0     0
-##                                      American Tree Sparrow         0     0
-##                                     American White Pelican         0     0
-##                                            American Wigeon         0     0
-##                                          American Woodcock         0     0
-##                                           Ancient Murrelet         0     1
-##                                                    Anhinga         0     0
-##                                         Anna&#39;s Hummingbird         0     0
-##                                            Aplomado Falcon         1     0
-##                               Arctic and Pacific Loon \xa6         0     0
-##                                         Arizona Woodpecker         0     0
-##                                    Ash-throated Flycatcher         0     0
-##                                            Atlantic Puffin         0     1
-##                                           Audubon&#39;s Oriole         0     0
-##                                          Bachman&#39;s Sparrow         0     0
-##                                            Baird&#39;s Sparrow         1     0
-##                                                 Bald Eagle         0     0
-##                                           Baltimore Oriole         0     0
-##                                         Band-tailed Pigeon         0     0
-##                                                   Barn Owl         0     0
-##                                               Barn Swallow         0     0
-##                                                 Barred Owl         0     0
-##                                         Barrow&#39;s Goldeneye         0     0
-##                      Bell&#39;s and Sagebrush Sparrow \xa0\xa0         0     0
-##                                               Bell&#39;s Vireo         0     0
-##                                          Belted Kingfisher         0     0
-##                                         Bendire&#39;s Thrasher         0     0
-##                                              Bewick&#39;s Wren         0     0
-##                                                Black Brant         0     0
-##                                            Black Guillemot         0     1
-##                                        Black Oystercatcher         0     1
-##                                               Black Phoebe         0     0
-##                                                 Black Rail         0     0
-##                                               Black Scoter         0     0
-##                                              Black Skimmer         0     1
-##                                            Black Turnstone         0     0
-##                                              Black Vulture         0     0
-##                                    Black-and-white Warbler         0     0
-##                                    Black-backed Woodpecker         0     0
-##                                       Black-bellied Plover         0     0
-##                               Black-bellied Whistling-Duck         0     0
-##                                        Black-billed Magpie         0     0
-##                                     Black-capped Chickadee         0     0
-##                                  Black-chinned Hummingbird         0     0
-##                                      Black-chinned Sparrow         0     0
-##                       Black-crested and Tufted Titmouse __         0     0
-##                                  Black-crowned Night-Heron         0     0
-##                                     Black-footed Albatross         0     1
-##                                      Black-headed Grosbeak         0     0
-##                                          Black-headed Gull         0     0
-##                                     Black-legged Kittiwake         0     1
-##                                         Black-necked Stilt         0     0
-##                                Black-throated Blue Warbler         0     0
-##                                Black-throated Gray Warbler         0     0
-##                               Black-throated Green Warbler         0     0
-##                                     Black-throated Sparrow         0     0
-##  Black, Brown-capped, and Gray-crowned Rosy-Finch \xa4\xa4         0     0
-##                                              Blue Grosbeak         0     0
-##                                                   Blue Jay         0     0
-##                                      Blue-gray Gnatcatcher         0     0
-##    Blue-headed, Cassin&#39;s, and Plumbeous Vireo \xe0\xe0\xe0         0     0
-##                                  Blue-throated Hummingbird         0     0
-##                                           Blue-winged Teal         0     0
-##              Boat-tailed and Great-tailed Grackle \xa6\xa6         0     0
-##                                           Bohemian Waxwing         0     0
-##                                           Bonaparte&#39;s Gull         0     0
-##                                           Boreal Chickadee         0     0
-##                                                 Boreal Owl         0     0
-##                                         Brandt&#39;s Cormorant         0     1
-##                                         Brewer&#39;s Blackbird         0     0
-##                                           Brewer&#39;s Sparrow         0     0
-##                                           Bridled Titmouse         0     0
-##                                   Broad-billed Hummingbird         0     0
-##                                   Broad-tailed Hummingbird         0     0
-##                                          Broad-winged Hawk         0     0
-##                                            Bronzed Cowbird         0     0
-##                                                Brown Booby         0     1
-##                                              Brown Creeper         0     0
-##                                                  Brown Jay         0     0
-##                                              Brown Pelican         0     1
-##                                             Brown Thrasher         0     0
-##                                   Brown-crested Flycatcher         0     0
-##                                       Brown-headed Cowbird         0     0
-##                                      Brown-headed Nuthatch         0     0
-##                                                 Budgerigar         0     0
-##                                   Buff-bellied Hummingbird         0     0
-##                                                 Bufflehead         0     0
-##                                           Bullock&#39;s Oriole         0     0
-##                                              Burrowing Owl         1     0
-##                                                    Bushtit         0     0
-##                             Cackling and Canada Goose \xa0         0     0
-##                                                Cactus Wren         0     0
-##                       California and Canyon/Brown Towhee #         0     0
-##                                          California Condor         0     0
-##                                     California Gnatcatcher         0     0
-##                                            California Gull         0     0
-##                                           California Quail         0     0
-##                                        California Thrasher         0     0
-##                                       Calliope Hummingbird         0     0
-##                                                 Canvasback         0     0
-##                                                Canyon Wren         0     0
-##                                           Cape May Warbler         0     0
-##                                         Carolina Chickadee         0     0
-##                                              Carolina Wren         0     0
-##                                               Caspian Tern         0     0
-##                                            Cassin&#39;s Auklet         0     1
-##                                             Cassin&#39;s Finch         0     0
-##                                          Cassin&#39;s Kingbird         0     0
-##                                           Cassin&#39;s Sparrow         1     0
-##                                               Cattle Egret         0     0
-##                                               Cave Swallow         0     0
-##                                              Cedar Waxwing         0     0
-##                                  Chestnut-backed Chickadee         0     0
-##                                 Chestnut-collared Longspur         1     0
-##                                     Chestnut-sided Warbler         0     0
-##                                           Chihuahuan Raven         0     0
-##                                           Chipping Sparrow         0     0
-##                                         Chuck-will&#39;s-widow         0     0
-##                                                     Chukar         0     0
-##                                              Cinnamon Teal         0     0
-##                                               Clapper Rail         0     0
-##                     Clark&#39;s and Western Grebe \xa4\xa4\xa4         0     0
-##                                         Clark&#39;s Nutcracker         0     0
-##                                       Clay-colored Sparrow         0     0
-##                                        Clay-colored Thrush         0     0
-##                                               Common Eider         0     1
-##                                           Common Goldeneye         0     0
-##                                             Common Grackle         0     0
-##                                         Common Ground-Dove         0     0
-##                                                Common Loon         0     0
-##                                           Common Merganser         0     0
-##                                             Common Moorhen         0     0
-##                                               Common Murre         0     1
-##                                                Common Myna         0     0
-##                                            Common Pauraque         0     0
-##                                            Common Poorwill         0     0
-##                                               Common Raven         0     0
-##                                             Common Redpoll         0     0
-##                                                Common Tern         0     0
-##                                        Common Yellowthroat         0     0
-##                                              Cooper&#39;s Hawk         0     0
-##                                        Costa&#39;s Hummingbird         0     0
-##                 Couch&#39;s and Tropical Kingbird \xa0\xa0\xa0         0     0
-##                                           Crested Caracara         0     0
-##                                               Crested Myna         0     0
-##                                           Crissal Thrasher         0     0
-##                                      Curve-billed Thrasher         0     0
-##                                            Dark-eyed Junco         0     0
-##                                                 Dickcissel         1     0
-##                                   Double-crested Cormorant         0     0
-##                                                    Dovekie         0     1
-##                                           Downy Woodpecker         0     0
-##                                                     Dunlin         0     0
-##                                           Dusky Flycatcher         0     0
-##                                               Dusky Grouse         0     0
-##                                    Dusky-capped Flycatcher         0     0
-##                                                Eared Grebe         0     0
-##                    Eastern and Mexican Whip-poor-will \xe0         0     0
-##                               Eastern and Spotted Towhee _         0     0
-##               Eastern and Western Screech-Owl \xa6\xa6\xa6         0     0
-##                                           Eastern Bluebird         0     0
-##                                         Eastern Meadowlark         1     0
-##                                             Eastern Phoebe         0     0
-##                                         Eastern Wood-Pewee         0     0
-##                                               Elegant Tern         0     1
-##                                             Elegant Trogon         0     0
-##                                              Emperor Goose         0     0
-##                                     Eurasian Collared-Dove         0     0
-##                                      Eurasian Tree Sparrow         0     0
-##                                            Eurasian Wigeon         0     0
-##                                          European Starling         0     0
-##                                           Evening Grosbeak         0     0
-##                                           Ferruginous Hawk         1     0
-##                                      Ferruginous Pygmy-Owl         0     0
-##                                              Field Sparrow         0     0
-##                                                  Fish Crow         0     0
-##                                       Five-striped Sparrow         0     0
-##                                          Florida Scrub-Jay         0     0
-##                                             Forster&#39;s Tern         0     0
-##                                                Fox Sparrow         0     0
-##                                            Franklin&#39;s Gull         0     0
-##                                     Fulvous Whistling-Duck         0     0
-##                                                    Gadwall         0     0
-##                                             Gambel&#39;s Quail         0     0
-##                                            Gila Woodpecker         0     0
-##                                             Gilded Flicker         0     0
-##                                              Glaucous Gull         0     0
-##                                       Glaucous-winged Gull         0     1
-##                                                Glossy Ibis         0     0
-##                                               Golden Eagle         0     0
-##                                     Golden-crowned Kinglet         0     0
-##                                     Golden-crowned Sparrow         0     0
-##                                  Golden-fronted Woodpecker         0     0
-##                                        Grasshopper Sparrow         0     0
-##                                               Gray Catbird         0     0
-##                                            Gray Flycatcher         0     0
-##                                                  Gray Hawk         0     0
-##                                                   Gray Jay         0     0
-##                                             Gray Partridge         1     0
-##                                    Great Black-backed Gull         0     0
-##                                           Great Blue Heron         0     0
-##                                            Great Cormorant         0     1
-##                                   Great Crested Flycatcher         0     0
-##                                                Great Egret         0     0
-##                                             Great Gray Owl         0     0
-##                                           Great Horned Owl         0     0
-##                                             Great Kiskadee         0     0
-##                                              Greater Pewee         0     0
-##                                    Greater Prairie-Chicken         1     0
-##                                         Greater Roadrunner         0     0
-##                                        Greater Sage-Grouse         0     0
-##                                              Greater Scaup         0     0
-##                                Greater White-fronted Goose         0     0
-##                                         Greater Yellowlegs         0     0
-##                                                Green Heron         0     0
-##                                                  Green Jay         0     0
-##                                           Green Kingfisher         0     0
-##                                             Green Parakeet         0     0
-##                                        Green-tailed Towhee         0     0
-##                                          Green-winged Teal         0     0
-##                                          Groove-billed Ani         0     0
-##                                           Gull-billed Tern         0     1
-##                                                  Gyrfalcon         1     0
-##                                           Hairy Woodpecker         0     0
-##                                       Hammond&#39;s Flycatcher         0     0
-##                                             Harlequin Duck         0     0
-##                                              Harris&#39;s Hawk         0     0
-##                                           Harris&#39;s Sparrow         0     0
-##                                            Heermann&#39;s Gull         0     1
-##                                          Henslow&#39;s Sparrow         1     0
-##                                            Hepatic Tanager         0     0
-##                                              Hermit Thrush         0     0
-##                                             Hermit Warbler         0     0
-##                                               Herring Gull         0     0
-##                                                  Hill Myna         0     0
-##                                              Hoary Redpoll         0     0
-##                                           Hooded Merganser         0     0
-##                                              Hooded Oriole         0     0
-##                                           Hook-billed Kite         0     0
-##                                               Horned Grebe         0     0
-##                                                Horned Lark         1     0
-##                                                House Finch         0     0
-##                                              House Sparrow         0     0
-##                                                 House Wren         0     0
-##                                             Hutton&#39;s Vireo         0     0
-##                             Iceland and Thayer&#39;s Gull \xa4         0     0
-##                                                  Inca Dove         0     0
-##                                             Indigo Bunting         0     0
-##                                Juniper and Oak Titmouse ##         0     0
-##                                                   Killdeer         0     0
-##                                                 King Eider         0     0
-##                                                  King Rail         0     0
-##                                   Ladder-backed Woodpecker         0     0
-##                                           Lapland Longspur         1     0
-##                                               Lark Bunting         1     0
-##                                               Lark Sparrow         0     0
-##                                              Laughing Gull         0     1
-##                                       Lawrence&#39;s Goldfinch         0     0
-##                                             Lazuli Bunting         0     0
-##                                         Le Conte&#39;s Sparrow         0     0
-##                                        Le Conte&#39;s Thrasher         0     0
-##                                              Least Bittern         0     0
-##                                           Least Flycatcher         0     0
-##                                                Least Grebe         0     0
-##                                            Least Sandpiper         0     0
-##                                                 Least Tern         0     1
-##                                   Lesser Black-backed Gull         0     1
-##                                           Lesser Goldfinch         0     0
-##                                           Lesser Nighthawk         0     0
-##                                     Lesser Prairie-Chicken         0     0
-##                                               Lesser Scaup         0     0
-##                                          Lesser Yellowlegs         0     0
-##                                         Lewis&#39;s Woodpecker         0     0
-##                                                    Limpkin         0     0
-##                                          Lincoln&#39;s Sparrow         0     0
-##                                          Little Blue Heron         0     0
-##                                                Little Gull         0     0
-##                                          Loggerhead Shrike         0     0
-##                                         Long-billed Curlew         1     0
-##                                      Long-billed Dowitcher         0     0
-##                                       Long-billed Thrasher         0     0
-##                                             Long-eared Owl         0     0
-##                                           Long-tailed Duck         0     0
-##                                      Louisiana Waterthrush         0     0
-##                                     MacGillivray&#39;s Warbler         0     0
-##                                    Magnificent Frigatebird         0     1
-##                                    Magnificent Hummingbird         0     0
-##                                           Magnolia Warbler         0     0
-##                                                    Mallard         0     0
-##                                             Marbled Godwit         0     0
-##                                           Marbled Murrelet         0     1
-##                                                 Marsh Wren         0     0
-##                                          McCown&#39;s Longspur         1     0
-##                                            McKay&#39;s Bunting         1     0
-##                                                     Merlin         0     0
-##                                                   Mew Gull         0     1
-##                                          Mexican Chickadee         0     0
-##                                                Mexican Jay         0     0
-##                                              Monk Parakeet         0     0
-##                                            Montezuma Quail         0     0
-##                                               Mottled Duck         0     0
-##                                          Mountain Bluebird         0     0
-##                                         Mountain Chickadee         0     0
-##                                            Mountain Plover         1     0
-##                                             Mountain Quail         0     0
-##                                              Mourning Dove         0     0
-##                                                  Mute Swan         0     0
-##                                          Nashville Warbler         0     0
-##                    Nelson&#39;s and Saltmarsh Sparrow \xe0\xe0         0     0
-##                                        Neotropic Cormorant         0     0
-##                              Northern Beardless-Tyrannulet         0     0
-##                                          Northern Bobwhite         0     0
-##                                          Northern Cardinal         0     0
-##                                           Northern Flicker         0     0
-##                                            Northern Fulmar         0     1
-##                                            Northern Gannet         0     1
-##                                           Northern Goshawk         0     0
-##                                           Northern Harrier         0     0
-##                                          Northern Hawk Owl         0     0
-##                                       Northern Mockingbird         0     0
-##                                            Northern Parula         0     0
-##                                           Northern Pintail         0     0
-##                                         Northern Pygmy-Owl         0     0
-##                              Northern Rough-winged Swallow         0     0
-##                                      Northern Saw-whet Owl         0     0
-##                                          Northern Shoveler         0     0
-##                                            Northern Shrike         0     0
-##                                       Northern Waterthrush         0     0
-##                                          Northwestern Crow         0     0
-##                                       Nuttall&#39;s Woodpecker         0     0
-##                                              Olive Sparrow         0     0
-##                                              Olive Warbler         0     0
-##                                     Orange-crowned Warbler         0     0
-##                                             Orchard Oriole         0     0
-##                                                     Osprey         0     0
-##                                                   Ovenbird         0     0
-##                                      Pacific Golden-Plover         1     0
-##                                   Pacific-slope Flycatcher         0     0
-##                                            Painted Bunting         0     0
-##                                           Painted Redstart         0     0
-##                                               Palm Warbler         0     0
-##                                           Parasitic Jaeger         0     1
-##                                         Pectoral Sandpiper         0     0
-##                                          Pelagic Cormorant         0     1
-##                                           Peregrine Falcon         0     0
-##                                                Phainopepla         0     0
-##                                          Pied-billed Grebe         0     0
-##                                           Pigeon Guillemot         0     1
-##                                        Pileated Woodpecker         0     0
-##                                              Pine Grosbeak         0     0
-##                                                Pine Siskin         0     0
-##                                               Pine Warbler         0     0
-##                                                 Pinyon Jay         0     0
-##                                              Piping Plover         0     1
-##                                           Plain Chachalaca         0     0
-##                                            Pomarine Jaeger         0     1
-##                                             Prairie Falcon         1     0
-##                                            Prairie Warbler         0     0
-##                                       Prothonotary Warbler         0     0
-##                                               Purple Finch         0     0
-##                                           Purple Gallinule         0     0
-##                                           Purple Sandpiper         0     0
-##                                             Pygmy Nuthatch         0     0
-##                                                Pyrrhuloxia         0     0
-##                                                  Razorbill         0     1
-##                                              Red Crossbill         0     0
-##                                                   Red Knot         0     0
-##                                     Red-bellied Woodpecker         0     0
-##                                          Red-billed Pigeon         0     0
-##                                     Red-breasted Merganser         0     0
-##                                      Red-breasted Nuthatch         0     0
-##                                     Red-breasted Sapsucker         0     0
-##                                    Red-cockaded Woodpecker         0     0
-##                                         Red-crowned Parrot         0     0
-##                                        Red-faced Cormorant         0     1
-##                                      Red-headed Woodpecker         0     0
-##                                        Red-naped Sapsucker         0     0
-##                                           Red-necked Grebe         0     0
-##                                       Red-necked Phalarope         0     0
-##                                        Red-shouldered Hawk         0     0
-##                                            Red-tailed Hawk         0     0
-##                                          Red-throated Loon         0     0
-##                                       Red-winged Blackbird         0     0
-##                                              Reddish Egret         0     0
-##                                                    Redhead         0     0
-##                                          Rhinoceros Auklet         0     1
-##                                           Ring-billed Gull         0     0
-##                                           Ring-necked Duck         0     0
-##                                       Ring-necked Pheasant         1     0
-##                                          Ringed Kingfisher         0     0
-##                                             Rock Ptarmigan         1     0
-##                                             Rock Sandpiper         0     0
-##                                                  Rock Wren         0     0
-##                                     Rose-breasted Grosbeak         0     0
-##                                       Rose-ringed Parakeet         0     0
-##                                          Roseate Spoonbill         0     0
-##                                               Ross&#39;s Goose         0     0
-##                                          Rough-legged Hawk         1     0
-##                                                 Royal Tern         0     1
-##                                       Ruby-crowned Kinglet         0     0
-##                                  Ruby-throated Hummingbird         0     0
-##                                                 Ruddy Duck         0     0
-##                                          Ruddy Ground-dove         0     0
-##                                            Ruddy Turnstone         0     0
-##                                              Ruffed Grouse         0     0
-##                                         Rufous Hummingbird         0     0
-##                                     Rufous-crowned Sparrow         0     0
-##                                      Rufous-winged Sparrow         0     0
-##                                            Rusty Blackbird         0     0
-##                                              Sage Thrasher         0     0
-##                                                 Sanderling         0     0
-##                                             Sandhill Crane         0     0
-##                                              Sandwich Tern         0     1
-##                                           Savannah Sparrow         1     0
-##                                               Say&#39;s Phoebe         0     0
-##                                               Scaled Quail         0     0
-##                                  Scissor-tailed Flycatcher         0     0
-##                                             Scott&#39;s Oriole         0     0
-##                                            Seaside Sparrow         0     0
-##                                                 Sedge Wren         0     0
-##                                        Semipalmated Plover         0     0
-##                                     Semipalmated Sandpiper         0     0
-##                                         Sharp-shinned Hawk         0     0
-##                                        Sharp-tailed Grouse         0     0
-##                                              Shiny Cowbird         0     0
-##                                     Short-billed Dowitcher         0     0
-##                                            Short-eared Owl         1     0
-##                                          Short-tailed Hawk         0     0
-##                                    Short-tailed Shearwater         0     1
-##                                                    Skylark         1     0
-##                                           Smith&#39;s Longspur         1     0
-##                                          Smooth-billed Ani         0     0
-##                                                 Snail Kite         0     0
-##                                               Snow Bunting         1     0
-##                                                 Snow Goose         0     0
-##                                                Snowy Egret         0     0
-##                                                  Snowy Owl         1     0
-##                                               Snowy Plover         0     1
-##                                         Solitary Sandpiper         0     0
-##                                               Song Sparrow         0     0
-##                                           Sooty Shearwater         0     1
-##                                                       Sora         0     0
-##                                       Spot-breasted Oriole         0     0
-##                                               Spotted Dove         0     0
-##                                                Spotted Owl         0     0
-##                                          Spotted Sandpiper         0     0
-##                                            Sprague&#39;s Pipit         1     0
-##                                              Spruce Grouse         0     0
-##                                            Steller&#39;s Eider         0     0
-##                                              Steller&#39;s Jay         0     0
-##                                            Stilt Sandpiper         0     0
-##                                             Summer Tanager         0     0
-##                                                Surf Scoter         0     0
-##                                                   Surfbird         0     0
-##                                            Swainson&#39;s Hawk         0     0
-##                                              Swamp Sparrow         0     0
-##                                          Tennessee Warbler         0     0
-##                                      Thick-billed Kingbird         0     0
-##                                         Thick-billed Murre         0     1
-##                                       Townsend&#39;s Solitaire         0     0
-##                                         Townsend&#39;s Warbler         0     0
-##                                               Tree Swallow         0     0
-##                                       Tricolored Blackbird         0     0
-##                                           Tricolored Heron         0     0
-##                                            Tropical Parula         0     0
-##                                             Trumpeter Swan         0     0
-##                                                Tufted Duck         0     0
-##                                                Tundra Swan         0     0
-##                                             Turkey Vulture         0     0
-##                                              Varied Thrush         0     0
-##                                               Vaux&#39;s Swift         0     0
-##                                                     Verdin         0     0
-##                                       Vermilion Flycatcher         0     0
-##                                             Vesper Sparrow         1     0
-##                                 Violet-crowned Hummingbird         0     0
-##                                       Violet-green Swallow         0     0
-##                                              Virginia Rail         0     0
-##                                          Wandering Tattler         0     0
-##                                           Western Bluebird         0     0
-##                                               Western Gull         0     1
-##                                           Western Kingbird         0     0
-##                                         Western Meadowlark         1     0
-##                                          Western Sandpiper         0     0
-##                                          Western Scrub-Jay         0     0
-##                                            Western Tanager         0     0
-##                                                   Whimbrel         0     0
-##                                      Whiskered Screech-Owl         0     0
-##                                                 White Ibis         0     0
-##                                    White-breasted Nuthatch         0     0
-##                                   White-collared Seedeater         0     0
-##                                       White-crowned Pigeon         0     0
-##                                      White-crowned Sparrow         0     0
-##                                           White-eyed Vireo         0     0
-##                                           White-faced Ibis         0     0
-##                                    White-headed Woodpecker         0     0
-##                                     White-rumped Sandpiper         0     0
-##                                          White-tailed Hawk         1     0
-##                                          White-tailed Kite         0     0
-##                                     White-tailed Ptarmigan         1     0
-##                                     White-throated Sparrow         0     0
-##                                       White-throated Swift         0     0
-##                                          White-tipped Dove         0     0
-##                                     White-winged Crossbill         0     0
-##                                          White-winged Dove         0     0
-##                                      White-winged Parakeet         0     0
-##                                        White-winged Scoter         0     0
-##                                             Whooping Crane         0     0
-##                                                Wild Turkey         0     0
-##                                                     Willet         0     0
-##                                     Williamson&#39;s Sapsucker         0     0
-##                                           Willow Ptarmigan         0     0
-##                                         Wilson&#39;s Phalarope         0     0
-##                                            Wilson&#39;s Plover         0     1
-##                                             Wilson&#39;s Snipe         0     0
-##                                           Wilson&#39;s Warbler         0     0
-##                                                Winter Wren         0     0
-##                                                  Wood Duck         0     0
-##                                                 Wood Stork         0     0
-##                                                Wood Thrush         0     0
-##                                        Worm-eating Warbler         0     0
-##                                                    Wrentit         0     0
-##                                                Yellow Rail         0     0
-##                                             Yellow Warbler         0     0
-##                                   Yellow-bellied Sapsucker         0     0
-##                                         Yellow-billed Loon         0     0
-##                                       Yellow-billed Magpie         0     0
-##                                       Yellow-breasted Chat         0     0
-##                                 Yellow-crowned Night-Heron         0     0
-##                                          Yellow-eyed Junco         0     0
-##                                         Yellow-footed Gull         0     0
-##                                    Yellow-headed Blackbird         0     0
-##                                      Yellow-rumped Warbler         0     0
-##                                      Yellow-throated Vireo         0     0
-##                                    Yellow-throated Warbler         0     0
-##                                           Zone-tailed Hawk         0     0
-##  Shrubland Various Wetland Woodland NA_
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   1
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   1
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        0   1
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   1
-##          0       0       0        0   1
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   1
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   1
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          0       0       0        0   1
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   1
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   1
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   1
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   1
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   1
-##          0       0       0        0   1
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          1       0       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       1       0        0   0
-##          0       0       0        0   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       1       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          1       0       0        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          1       0       0        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       1        0   0
-##          0       0       1        0   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0
-##          0       0       0        1   0</code></pre>
+  group_by(habitat) %&gt;%
+  tally()</code></pre>
+<pre><code>## # A tibble: 7 × 2
+##   habitat       n
+##   &lt;chr&gt;     &lt;int&gt;
+## 1 Grassland    36
+## 2 Ocean        44
+## 3 Shrubland    82
+## 4 Various      45
+## 5 Wetland     153
+## 6 Woodland    177
+## 7 &lt;NA&gt;         14</code></pre>
 <p>Run the code below to learn about the <code>slice</code> function.
 Look specifically at the examples (at the bottom) for
 <code>slice_max()</code> and <code>slice_min()</code>. If you are still
@@ -1781,39 +688,154 @@ species is threatened.</p>
 <pre class="r"><code>names(eagles)</code></pre>
 <pre><code>## [1] &quot;common_name&quot;     &quot;scientific_name&quot; &quot;population_size&quot;</code></pre>
 <pre class="r"><code>eagles %&gt;%
-  filter()</code></pre>
-<pre><code>## # A tibble: 20 × 3
-##    common_name         scientific_name          population_size
-##    &lt;chr&gt;               &lt;chr&gt;                              &lt;dbl&gt;
-##  1 Bald Eagle          Haliaeetus leucocephalus              NA
-##  2 Broad-winged Hawk   Buteo platypterus                1700000
-##  3 Cooper&#39;s Hawk       Accipiter cooperii                700000
-##  4 Ferruginous Hawk    Buteo regalis                      80000
-##  5 Golden Eagle        Aquila chrysaetos                 130000
-##  6 Gray Hawk           Buteo nitidus                         NA
-##  7 Harris&#39;s Hawk       Parabuteo unicinctus               50000
-##  8 Hook-billed Kite    Chondrohierax uncinatus               NA
-##  9 Northern Goshawk    Accipiter gentilis                200000
-## 10 Northern Harrier    Circus cyaneus                    700000
-## 11 Red-shouldered Hawk Buteo lineatus                   1100000
-## 12 Red-tailed Hawk     Buteo jamaicensis                2000000
-## 13 Rough-legged Hawk   Buteo lagopus                     300000
-## 14 Sharp-shinned Hawk  Accipiter striatus                500000
-## 15 Short-tailed Hawk   Buteo brachyurus                      NA
-## 16 Snail Kite          Rostrhamus sociabilis                 NA
-## 17 Swainson&#39;s Hawk     Buteo swainsoni                   540000
-## 18 White-tailed Hawk   Buteo albicaudatus                    NA
-## 19 White-tailed Kite   Elanus leucurus                       NA
-## 20 Zone-tailed Hawk    Buteo albonotatus                     NA</code></pre>
+mutate(conservation_status = ifelse(population_size &lt; 250000, &quot;threatened&quot;, population_size)) %&gt;%
+arrange(population_size)</code></pre>
+<pre><code>## # A tibble: 20 × 4
+##    common_name         scientific_name          population_size conservation_s…¹
+##    &lt;chr&gt;               &lt;chr&gt;                              &lt;dbl&gt; &lt;chr&gt;           
+##  1 Harris&#39;s Hawk       Parabuteo unicinctus               50000 threatened      
+##  2 Ferruginous Hawk    Buteo regalis                      80000 threatened      
+##  3 Golden Eagle        Aquila chrysaetos                 130000 threatened      
+##  4 Northern Goshawk    Accipiter gentilis                200000 threatened      
+##  5 Rough-legged Hawk   Buteo lagopus                     300000 3e+05           
+##  6 Sharp-shinned Hawk  Accipiter striatus                500000 5e+05           
+##  7 Swainson&#39;s Hawk     Buteo swainsoni                   540000 540000          
+##  8 Cooper&#39;s Hawk       Accipiter cooperii                700000 7e+05           
+##  9 Northern Harrier    Circus cyaneus                    700000 7e+05           
+## 10 Red-shouldered Hawk Buteo lineatus                   1100000 1100000         
+## 11 Broad-winged Hawk   Buteo platypterus                1700000 1700000         
+## 12 Red-tailed Hawk     Buteo jamaicensis                2000000 2e+06           
+## 13 Bald Eagle          Haliaeetus leucocephalus              NA &lt;NA&gt;            
+## 14 Gray Hawk           Buteo nitidus                         NA &lt;NA&gt;            
+## 15 Hook-billed Kite    Chondrohierax uncinatus               NA &lt;NA&gt;            
+## 16 Short-tailed Hawk   Buteo brachyurus                      NA &lt;NA&gt;            
+## 17 Snail Kite          Rostrhamus sociabilis                 NA &lt;NA&gt;            
+## 18 White-tailed Hawk   Buteo albicaudatus                    NA &lt;NA&gt;            
+## 19 White-tailed Kite   Elanus leucurus                       NA &lt;NA&gt;            
+## 20 Zone-tailed Hawk    Buteo albonotatus                     NA &lt;NA&gt;            
+## # … with abbreviated variable name ¹​conservation_status</code></pre>
 <p>Problem 11. (2 points) Consider the results from questions 9 and 10.
 Are there any species for which their threatened status needs further
 study? How do you know?</p>
+<pre class="r"><code>eagles %&gt;%
+  select(common_name,population_size) %&gt;%
+  arrange(population_size)</code></pre>
+<pre><code>## # A tibble: 20 × 2
+##    common_name         population_size
+##    &lt;chr&gt;                         &lt;dbl&gt;
+##  1 Harris&#39;s Hawk                 50000
+##  2 Ferruginous Hawk              80000
+##  3 Golden Eagle                 130000
+##  4 Northern Goshawk             200000
+##  5 Rough-legged Hawk            300000
+##  6 Sharp-shinned Hawk           500000
+##  7 Swainson&#39;s Hawk              540000
+##  8 Cooper&#39;s Hawk                700000
+##  9 Northern Harrier             700000
+## 10 Red-shouldered Hawk         1100000
+## 11 Broad-winged Hawk           1700000
+## 12 Red-tailed Hawk             2000000
+## 13 Bald Eagle                       NA
+## 14 Gray Hawk                        NA
+## 15 Hook-billed Kite                 NA
+## 16 Short-tailed Hawk                NA
+## 17 Snail Kite                       NA
+## 18 White-tailed Hawk                NA
+## 19 White-tailed Kite                NA
+## 20 Zone-tailed Hawk                 NA</code></pre>
+<pre class="r"><code>#View(eagles)</code></pre>
+<p><strong>Bald eagles, Gray Hawk, Hook-billed Kite , Short-tailed Hawk,
+Snail Kite, White-tailed Hawk,<br />
+White-tailed Kite , and Zone-tailed Hawk because their population size
+is denoted by NA</strong></p>
 <p>Problem 12. (4 points) Use the <code>ecosphere</code> data to perform
 one exploratory analysis of your choice. The analysis must have a
 minimum of three lines and two functions. You must also clearly state
-the question you are attempting to answer.</p>
+the question you are attempting to answer. <strong>What species lays the
+most eggs per clutch?</strong></p>
+<pre class="r"><code>eagles_eggs &lt;- ecosphere %&gt;%
+filter(family == &quot;Accipitridae&quot;)%&gt;%
+select(common_name, mean_eggs_per_clutch, population_size)
+eagles_eggs</code></pre>
+<pre><code>## # A tibble: 20 × 3
+##    common_name         mean_eggs_per_clutch population_size
+##    &lt;chr&gt;                              &lt;dbl&gt;           &lt;dbl&gt;
+##  1 Bald Eagle                           2                NA
+##  2 Broad-winged Hawk                    2.5         1700000
+##  3 Cooper&#39;s Hawk                        4.5          700000
+##  4 Ferruginous Hawk                     3             80000
+##  5 Golden Eagle                         2.5          130000
+##  6 Gray Hawk                            2                NA
+##  7 Harris&#39;s Hawk                        9             50000
+##  8 Hook-billed Kite                     2.5              NA
+##  9 Northern Goshawk                     3            200000
+## 10 Northern Harrier                     4            700000
+## 11 Red-shouldered Hawk                  3.5         1100000
+## 12 Red-tailed Hawk                      3           2000000
+## 13 Rough-legged Hawk                    4.5          300000
+## 14 Sharp-shinned Hawk                   4.5          500000
+## 15 Short-tailed Hawk                    2                NA
+## 16 Snail Kite                           3                NA
+## 17 Swainson&#39;s Hawk                      3            540000
+## 18 White-tailed Hawk                    2.5              NA
+## 19 White-tailed Kite                    4.5              NA
+## 20 Zone-tailed Hawk                     1.5              NA</code></pre>
+<pre class="r"><code>eagles_eggs %&gt;%
+  arrange(mean_eggs_per_clutch)</code></pre>
+<pre><code>## # A tibble: 20 × 3
+##    common_name         mean_eggs_per_clutch population_size
+##    &lt;chr&gt;                              &lt;dbl&gt;           &lt;dbl&gt;
+##  1 Zone-tailed Hawk                     1.5              NA
+##  2 Bald Eagle                           2                NA
+##  3 Gray Hawk                            2                NA
+##  4 Short-tailed Hawk                    2                NA
+##  5 Broad-winged Hawk                    2.5         1700000
+##  6 Golden Eagle                         2.5          130000
+##  7 Hook-billed Kite                     2.5              NA
+##  8 White-tailed Hawk                    2.5              NA
+##  9 Ferruginous Hawk                     3             80000
+## 10 Northern Goshawk                     3            200000
+## 11 Red-tailed Hawk                      3           2000000
+## 12 Snail Kite                           3                NA
+## 13 Swainson&#39;s Hawk                      3            540000
+## 14 Red-shouldered Hawk                  3.5         1100000
+## 15 Northern Harrier                     4            700000
+## 16 Cooper&#39;s Hawk                        4.5          700000
+## 17 Rough-legged Hawk                    4.5          300000
+## 18 Sharp-shinned Hawk                   4.5          500000
+## 19 White-tailed Kite                    4.5              NA
+## 20 Harris&#39;s Hawk                        9             50000</code></pre>
+<p><strong>body weight based on vore</strong></p>
+<pre class="r"><code>eagles_vore &lt;- ecosphere %&gt;%
+filter(family == &quot;Accipitridae&quot;)%&gt;%
+select(common_name, diet, log10_mass)
+eagles_vore</code></pre>
+<pre><code>## # A tibble: 20 × 3
+##    common_name         diet          log10_mass
+##    &lt;chr&gt;               &lt;chr&gt;              &lt;dbl&gt;
+##  1 Bald Eagle          Vertebrates         3.67
+##  2 Broad-winged Hawk   Vertebrates         2.66
+##  3 Cooper&#39;s Hawk       Vertebrates         2.63
+##  4 Ferruginous Hawk    Vertebrates         3.17
+##  5 Golden Eagle        Vertebrates         3.63
+##  6 Gray Hawk           Vertebrates         2.63
+##  7 Harris&#39;s Hawk       Vertebrates         2.93
+##  8 Hook-billed Kite    Invertebrates       2.49
+##  9 Northern Goshawk    Vertebrates         2.94
+## 10 Northern Harrier    Vertebrates         2.59
+## 11 Red-shouldered Hawk Invertebrates       2.78
+## 12 Red-tailed Hawk     Vertebrates         3.04
+## 13 Rough-legged Hawk   Vertebrates         2.98
+## 14 Sharp-shinned Hawk  Vertebrates         2.12
+## 15 Short-tailed Hawk   Vertebrates         2.71
+## 16 Snail Kite          Invertebrates       2.57
+## 17 Swainson&#39;s Hawk     Vertebrates         2.98
+## 18 White-tailed Hawk   Vertebrates         3.01
+## 19 White-tailed Kite   Vertebrates         2.54
+## 20 Zone-tailed Hawk    Vertebrates         2.88</code></pre>
 <p>Please provide the names of the students you have worked with with
 during the exam:</p>
+<pre class="r"><code>#Jacob Yousif</code></pre>
 <p>Please be 100% sure your exam is saved, knitted, and pushed to your
 github repository. No need to submit a link on canvas, we will find your
 exam in your repository.</p>
