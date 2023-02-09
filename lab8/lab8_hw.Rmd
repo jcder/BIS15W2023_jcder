@@ -26,7 +26,10 @@ library(janitor)
 ## Install `here`
 The package `here` is a nice option for keeping directories clear when loading files. I will demonstrate below and let you decide if it is something you want to use.  
 ```{r}
-#install.packages("here")
+install.packages("here")
+```
+```{r}
+library(here)
 ```
 
 ## Data
@@ -36,7 +39,7 @@ This homework loosely follows the tutorial of [R Ladies Sydney](https://rladiess
 
 1. Start by loading the data `sydneybeaches`. Do some exploratory analysis to get an idea of the data structure.
 ```{r}
-
+sydneybeaches <- read_csv(here("lab8","data", "sydneybeaches.csv" ))
 ```
 
 If you want to try `here`, first notice the output when you load the `here` library. It gives you information on the current working directory. You can then use it to easily and intuitively load files.
@@ -50,28 +53,59 @@ sydneybeaches <-read_csv(here("lab8", "data", "sydneybeaches.csv")) %>% janitor:
 ```
 
 2. Are these data "tidy" per the definitions of the tidyverse? How do you know? Are they in wide or long format?
-
+**yes because each variable has its own name, observations have their own row, and each data has its own cell. The data is in the long format**
 
 3. We are only interested in the variables site, date, and enterococci_cfu_100ml. Make a new object focused on these variables only. Name the object `sydneybeaches_long`
+```{r}
+sydneybeaches_long <- sydneybeaches %>%
+  select("site", "date", "enterococci_cfu_100ml")
+sydneybeaches_long
+```
 
 
 4. Pivot the data such that the dates are column names and each beach only appears once. Name the object `sydneybeaches_wide`
+```{r}
+sydneybeaches_wide <- sydneybeaches_long %>%
+  pivot_wider(
+              names_from = "date",
+              values_from = "enterococci_cfu_100ml")
+sydneybeaches_wide
+```
 
 
 5. Pivot the data back so that the dates are data and not column names.
+```{r}
+sydneybeaches_wide%>%
+  pivot_longer(-site,
+               names_to = "date",
+               values_to = "enterocci_cfu_100ml")
+  
+```
 
 
 6. We haven't dealt much with dates yet, but separate the date into columns day, month, and year. Do this on the `sydneybeaches_long` data.
 
+```{r}
+
+```
 
 7. What is the average `enterococci_cfu_100ml` by year for each beach. Think about which data you will use- long or wide.
+```{r}
+
+```
 
 
 8. Make the output from question 7 easier to read by pivoting it to wide format.
+```{r}
+
+```
 
 
 9. What was the most polluted beach in 2018?
 
+```{r}
+
+```
 
 10. Please complete the class project survey at: [BIS 15L Group Project](https://forms.gle/H2j69Z3ZtbLH3efW6)
 
