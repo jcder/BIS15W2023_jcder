@@ -55,19 +55,20 @@ surgery%>%
   ggplot(aes(x=race, y=n))+ geom_col()
 ```
 
-**
+
 3. (2 points) What is the mean age of participants by gender? (hint: please provide a number for each) Since only three participants do not have gender indicated, remove these participants from the data.
 ```{r}
 surgery_age_mean_female <- surgery %>%
-  filter( gender, contains("F"))
+  filter( gender== "F" )%>%
   summarize(mean_age = mean(age, na.rm=T))
+surgery_age_mean_female
 ```
-```{r}
-surgery%>%
- 
-```
-```{r}
 
+```{r}
+surgery_age_mean_male <- surgery %>%
+  filter( gender== "M" )%>%
+  summarize(mean_age = mean(age, na.rm=T))
+surgery_age_mean_male
 ```
 
 4. (3 points) Make a plot that shows the range of age associated with gender.
@@ -105,27 +106,54 @@ The variable `ccsmort30rate` is a measure of the overall 30-day mortality rate a
 
 7. (4 points) What are the 5 procedures associated with highest risk of 30-day mortality AND how do they compare with the 5 procedures with highest risk of complication? (hint: no need for a plot here)
 ```{r}
-surgery %>% count(ahrq_ccs) %>% select(ahrq_ccs)
+surgery%>%
+  group_by(ahrq_ccs)%>%
+  summarize(mean_ccscomplicationrate =mean(ccscomplicationrate, na.rm=T))%>%
+  arrange(desc(mean_ccscomplicationrate))%>%
+  top_n(5, mean_ccscomplicationrate)
 ```
 
 ```{r}
-surgery_high_risk <- surgery%>%
-  select(ccsmort30rate, ahrq_ccs)%>%
-  top_n(5,distinct(ccsmort30rate))
+ surgery%>%
+  group_by(ahrq_ccs)%>%
+  summarize(mean_ccsmort30rate =mean(ccsmort30rate, na.rm=T))%>%
+  arrange(desc(mean_ccsmort30rate))%>%
+  top_n(5, mean_ccsmort30rate)
+
 ```
-```{r}
-surgery_high_risk%>%
-```
+
 
 8. (3 points) Make a plot that compares the `ccsmort30rate` for all listed `ahrq_ccs` procedures.
 ```{r}
 surgery%>%
-  ggplot(aes(x=ahrq_ccs, y=ccsmort30rate, fill=ahrq_ccs))+
-  geom_col()
+  ggplot(aes(x=ahrq_ccs, y=ccsmort30rate))+
+  geom_boxplot()+
+  theme(axis.text.x = element_text(angle = 60, hjust = 1))+
+  coord_flip()+
+  labs(title = "30-Day ortality Rate by Procedure ",
+       x = "Procedure",
+       y = "Mortality RAte")
+  
 ```
 
 
 9. (4 points) When is the best month to have surgery? Make a chart that shows the 30-day mortality and complications for the patients by month. `mort30` is the variable that shows whether or not a patient survived 30 days post-operation.
+```{r}
+ surgery%>% 
+  select(month, mort30)%>%
+  mutate(dead=)
+  
+```
+
+```{r}
+
+surgery%>%
+  filter(mort30== "No")%>%
+  count(mort30)
+  
+
+  
+```
 
 10. (4 points) Make a plot that visualizes the chart from question #9. Make sure that the months are on the x-axis. Do a search online and figure out how to order the months Jan-Dec.
 
