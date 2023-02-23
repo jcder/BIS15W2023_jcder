@@ -148,7 +148,8 @@ surgery%>%
 ```{r}
 
 surgery%>%
-  filter(mort30== "No")%>%
+  select(month, mort30)%>%
+  filter(mort30== "No" )%>%
   count(mort30)
   
 
